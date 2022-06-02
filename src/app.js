@@ -1,71 +1,16 @@
-let bb = {
-    ALLUSERSPROFILE: 'C:\\ProgramData',
-    APPDATA: 'C:\\Users\\Alexandr\\AppData\\Roaming',
-    CHROME_CRASHPAD_PIPE_NAME: '\\\\.\\pipe\\crashpad_8936_DBECDMPXPNOASYAS',
-    COLORTERM: 'truecolor',
-    COMMONPROGRAMFILES: 'C:\\Program Files\\Common Files',
-    COMPUTERNAME: 'DESKTOP-7MTHJFM',
-    COMSPEC: 'C:\\WINDOWS\\system32\\cmd.exe',
-    'CommonProgramFiles(x86)': 'C:\\Program Files (x86)\\Common Files',
-    CommonProgramW6432: 'C:\\Program Files\\Common Files',
-    DriverData: 'C:\\Windows\\System32\\Drivers\\DriverData',
-    EXEPATH: 'C:\\Program Files\\Git\\bin',
-    GIT_ASKPASS: 'c:\\Users\\Alexandr\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh',
-    HOME: 'C:\\Users\\Alexandr',
-    HOMEDRIVE: 'C:',
-    HOMEPATH: '\\Users\\Alexandr',
-    LANG: 'ru_RU.UTF-8',
-    LOCALAPPDATA: 'C:\\Users\\Alexandr\\AppData\\Local',
-    LOGONSERVER: '\\\\DESKTOP-7MTHJFM',
-    MSYSTEM: 'MINGW64',
-    NUMBER_OF_PROCESSORS: '6',
-    ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
-    OS: 'Windows_NT',
-    OneDrive: 'C:\\Users\\Alexandr\\OneDrive',
-    PATH: 'C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Alexandr\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Program Files\\dotnet;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\dotnet;C:\\Program Files\\PowerShell\\7;C:\\Program Files\\nodejs;C:\\Users\\Alexandr\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\JetBrains\\WebStorm 2021.2.3\\bin;C:\\Users\\Alexandr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Alexandr\\.dotnet\\tools;C:\\Program Files (x86)\\BrowserStackLocal;C:\\Users\\Alexandr\\AppData\\Roaming\\npm',
-    PATHEXT: '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
-    PLINK_PROTOCOL: 'ssh',
-    POWERSHELL_DISTRIBUTION_CHANNEL: 'MSI:Windows 10 Pro',
-    PROCESSOR_ARCHITECTURE: 'AMD64',
-    PROCESSOR_IDENTIFIER: 'Intel64 Family 6 Model 158 Stepping 10, GenuineIntel',
-    PROCESSOR_LEVEL: '6',
-    PROCESSOR_REVISION: '9e0a',
-    PROGRAMFILES: 'C:\\Program Files',
-    PS1: '\\[\\033]0;$TITLEPREFIX:$PWD\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ ',
-    PSModulePath: 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules',
-    PUBLIC: 'C:\\Users\\Public',
-    PWD: 'D:/test/node-nodejs-basics',
-    ProgramData: 'C:\\ProgramData',
-    'ProgramFiles(x86)': 'C:\\Program Files (x86)',
-    ProgramW6432: 'C:\\Program Files',
-    RSS_name1: 'value1',
-    RSS_name2: 'value2',
-    SESSIONNAME: 'Console',
-    SHLVL: '1',
-    SYSTEMDRIVE: 'C:',
-    SYSTEMROOT: 'C:\\WINDOWS',
-    TEMP: 'C:\\Users\\Alexandr\\AppData\\Local\\Temp',
-    TERM: 'xterm-256color',
-    TERM_PROGRAM: 'vscode',
-    TERM_PROGRAM_VERSION: '1.67.2',
-    TMP: 'C:\\Users\\Alexandr\\AppData\\Local\\Temp',
-    USERDOMAIN: 'DESKTOP-7MTHJFM',
-    USERDOMAIN_ROAMINGPROFILE: 'DESKTOP-7MTHJFM',
-    USERNAME: 'Alexandr',
-    USERPROFILE: 'C:\\Users\\Alexandr',
-    VSCODE_GIT_ASKPASS_EXTRA_ARGS: '--ms-enable-electron-run-as-node',
-    VSCODE_GIT_ASKPASS_MAIN: 'c:\\Users\\Alexandr\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js',
-    VSCODE_GIT_ASKPASS_NODE: 'C:\\Users\\Alexandr\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe',
-    VSCODE_GIT_IPC_HANDLE: '\\\\.\\pipe\\vscode-git-f542bd7e9b-sock',
-    WINDIR: 'C:\\WINDOWS',
-    WebStorm: 'C:\\Program Files\\JetBrains\\WebStorm 2021.2.3\\bin;',
-    _: 'C:/Program Files/nodejs/node',
-    __COMPAT_LAYER: 'DetectorsAppHealth'
+let bb =[
+    'C:\\Program Files\\nodejs\\node.exe',
+    'D:\\test\\node-nodejs-basics\\src\\cli\\args.js',
+    '--dfs',
+    'sddf',
+    '--sdfa',
+    '23'
+  ]
+
+  const temp = []
+  for (let i = 2; i < bb.length; i=i+2) {
+      temp.push(`${bb[i].replace('--','')} is ${bb[i+1]}`)
+      console.log(bb[i]);
   }
 
-
-  for (const key in bb) {
-      if(key.startsWith('RSS_')){
-        console.log(`${key}=${bb[key]}`);
-      }
-  }
+  temp.join(', ');//?

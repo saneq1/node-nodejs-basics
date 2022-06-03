@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 export const copy = async () => {
     fs.access(`${path.dirname(__filename)}/files`, function(no_access){ // проверка на наличие папки
         if (no_access) {
-            throw "FS operation failed - no field"
+            throw no_access
         } else {
          fs.access(`${path.dirname(__filename)}/files_copy`, function(no_files_copy_access){ // проверка на наличие папки
                 if (no_files_copy_access) {
@@ -20,7 +20,7 @@ export const copy = async () => {
                         }
                      });
                 } else {
-                    throw "FS operation failed - field files_copy exist"
+                    throw no_files_copy_access
                 }
             })
         }

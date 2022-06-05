@@ -3,8 +3,6 @@ import path from "path"
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 
-
-
 export const copy = async () => {
     fs.access(`${path.dirname(__filename)}/files`, function(no_access){ // проверка на наличие папки
         if (no_access) {

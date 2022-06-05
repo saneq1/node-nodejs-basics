@@ -3,7 +3,6 @@ import path from "path"
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 
-
 export const create = async () => {
     fs.access(`${path.dirname(__filename)}/files/fresh.txt`, function(no_access){ // проверка на наличие файла
         if (access) {
